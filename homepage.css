@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background-color: #e2eff8;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 20px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  margin: 2% 4%;
+  column-gap: 10rem;
+}
+
+nav .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav.left h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+}
+nav ul.list-item {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 40px;
+  column-gap: 1.3rem;
+}
+nav ul.list-item li a {
+  font-size: 17px;
+  color: black;
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  transition: all 300ms ease;
+}
+nav ul.list-item li a:hover {
+  background-color: #29a5ef;
+  color: #fff;
+}
+nav ul.list-item li:nth-child(6) {
+  margin-left: auto;
+}
+nav ul.list-item li:last-child {
+  display: none;
+}
+nav ul.list-item li button {
+  border: 1px solid #29a5ef;
+  font-size: 16px;
+  color: #29a5ef;
+  padding: 12px 30px;
+  background: transparent;
+  font-weight: 700;
+  transition: all 200ms ease;
+}
+nav ul.list-item li button:hover {
+  background-color: #29a5ef;
+  color: #fff;
+}
+main .content {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 50px;
+  gap: 20px;
+}
+main .content p.present {
+  font-size: 16px;
+  letter-spacing: 5px;
+  padding: 5px 0;
+  color: #555454;
+}
+main .content .big {
+  font-size: 50px;
+}
+main .content .small p {
+  font-size: 25px;
+  line-height: 1.5;
+  color: #555454;
+}
+main .content .bottom form {
+  margin: 20px 0;
+}
+main .content .bottom input[type="text"] {
+  padding: 15px 50px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+main .content .bottom input[type="submit"] {
+  margin-top: 15px;
+  background-color: orangered;
+  color: white;
+  padding: 15px 50px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+main .content .bottom input[type="submit"]:hover {
+  background-color: red;
+}
+main .content .bottom p {
+  font-size: 17px;
+  color: #555454;
+}
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 20px 10%;
+}
+
+footer .bottom {
+  line-height: 1.5;
+}
+footer .bottom h1 {
+  font-size: 25px;
+}
+footer .bottom p {
+  font-size: 15px;
+  color: #555454;
+}
+@media screen and (max-width: 1024px) {
+  nav {
+    margin: 20px 5px;
+    column-gap: 3rem;
+  }
+  nav ul.list-item li button {
+    padding: 12px;
+  }
+}
+@media screen and (max-width: 785px) {
+  nav {
+    display: block;
+    width: 100%;
+  }
+  nav .left {
+    display: block;
+    margin-bottom: 12px;
+  }
+  nav ul.list-item li:not(:nth-child(7)) {
+    display: none;
+  }
+  nav ul.list-item li.dropbtn {
+    display: inline-block;
+    margin-left: auto;
+    position: absolute;
+    top: 2%;
+    right: 10px;
+  }
+  nav ul.list-item.responsive {
+    position: relative;
+    display: block;
+    height: auto;
+    padding: 10px 0;
+  }
+  nav ul.list-item.responsive li.dropbtn {
+    position: absolute;
+    top: -47px;
+    right: 15px;
+  }
+  nav ul.list-item.responsive li:not(:last-child) {
+    display: inline;
+    margin-top: 10px;
+  }
+  nav ul.list-item.responsive li a {
+    padding-bottom: 20px;
+  }
+  nav ul.list-item.responsive li.dropbtn a {
+    padding: 5px;
+  }
+  nav ul.list-item.responsive li button {
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  main .content .big {
+    font-size: 35px;
+  }
+  main .content .small p {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  main .content .bottom input[type="submit"],
+  main .content .bottom input[type="text"] {
+    padding: 15px 35px;
+  }
+}
